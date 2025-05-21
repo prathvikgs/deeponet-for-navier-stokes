@@ -76,3 +76,19 @@ Inside ns_deeponet_final.py, you can adjust the following:
 - p, u, v, *_ = deeponet.solution(X_branch, X_trunk)
 
 
+# 📊 DeepONet Navier-Stokes: Model Inference & Visualization
+
+This script loads a pretrained model (`my_model.keras`) and evaluates it over a dense spatial grid to compute:
+- Velocity components `u(x, y, t)`, `v(x, y, t)`
+- Pressure `p(x, y, t)`
+- Time and spatial derivatives like `u_t`, `u_xx`, `v_y`, `p_x`, etc.
+
+The forcing function is:
+f(y) = -(1/4) * sin(k * y)
+
+- Loads the saved Keras model
+- Defines the spatial-temporal grid over `[0, 2π] x [0, 2π]` at a fixed `t = 10.0`
+- Creates input tensors for both branch (forcing function) and trunk (space-time coordinates)
+- Computes outputs and derivatives using TensorFlow's automatic differentiation
+- Visualizes the `u(x, y)` velocity component as a 2D heatmap
+- can do further analysis as required
