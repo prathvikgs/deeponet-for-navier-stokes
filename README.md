@@ -49,4 +49,30 @@ Velocity is computed from `ψ` as:
 
 Install dependencies with
 
+
 pip install tensorflow numpy scipy matplotlib pandas
+
+Usage
+1. Run the script
+python ns_deeponet_final.py
+This will:
+Build and train the DeepONet model
+Save the trained model as deeponet_Navierstokes.keras
+
+
+Inside ns_deeponet_final.py, you can adjust the following:
+sensors = 500             # Number of sensor points
+spacial_resol = 128       # Grid resolution (x and y)
+temporal_resol = 50       # Number of time steps
+total_epochs = 2000       # Training epochs
+mu = 0.1                  # Damping coefficient
+nu = 0.001                # Viscosity
+rho = 1                   # Fluid density
+k = np.array([4])         # Wavenumber for the forcing function
+
+The trained model is saved as: deeponet_Navierstokes.keras
+Loss histories: deeponet.loss_eqn, deeponet.loss_b, deeponet.loss_in, deeponet.loss_total
+To evaluate the solution at new inputs, use:
+p, u, v, *_ = deeponet.solution(X_branch, X_trunk)
+
+
