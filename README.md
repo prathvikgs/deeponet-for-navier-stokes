@@ -1,5 +1,5 @@
 # deeponet-for-navier-stokes
-# 🌀 DeepONet Solver for 2D Incompressible Navier-Stokes Equations
+# DeepONet Solver for 2D Incompressible Navier-Stokes Equations
 
 This repository implements a **Deep Operator Network (DeepONet)** to solve the **2D Navier-Stokes equations** using a physics-informed deep operator network with modifications. The model approximates the mapping from a parametric forcing function to the corresponding velocity and pressure fields over time.
 
