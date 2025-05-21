@@ -65,7 +65,7 @@ Inside ns_deeponet_final.py, you can adjust the following:
 - spacial_resol = 128       # Grid resolution (x and y)
 - temporal_resol = 50       # Number of time steps
 - total_epochs = 2000       # Training epochs
-- mu = 0.1                  # Damping coefficient
+- mu = 0.1                  
 - nu = 0.001                # Viscosity
 - rho = 1                   # Fluid density
 - k = np.array([4])         # Wavenumber for the forcing function
