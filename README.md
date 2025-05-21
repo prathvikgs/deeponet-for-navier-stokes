@@ -76,7 +76,7 @@ Inside ns_deeponet_final.py, you can adjust the following:
 - p, u, v, *_ = deeponet.solution(X_branch, X_trunk)
 
 
-# 📊 DeepONet Navier-Stokes: Model Inference & Visualization
+#  DeepONet Navier-Stokes: Model Inference & Visualization
 
 This script loads a pretrained model (`my_model.keras`) and evaluates it over a dense spatial grid to compute:
 - Velocity components `u(x, y, t)`, `v(x, y, t)`
